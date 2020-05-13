@@ -7,7 +7,9 @@ let pets = [
 getAge=(pet) => new Date().getFullYear() - pet.bornOn;
 pets.map(pet => {pet.age = getAge(pet)});
 console.log(pets);
-let jasper = pets
-  .filter(pet => pet.type === "dog")
-  .find(dog => dog.name === "Jasper");
+
+let dogs = pets.filter(pet => pet.type === "dog");
+console.log(dogs);
+
+let jasper = dogs.find(dog => dog.name === "Jasper");
 console.log(`Jasper is ${jasper.age} years old`);
